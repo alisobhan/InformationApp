@@ -6,7 +6,7 @@ namespace Domain.Contracts;
 public interface IGenericRepository<TEntity> where TEntity : BaseEntity 
 {
     TEntity GetBy(int id);
-    IEnumerable<TEntity> GetAll();
+    IQueryable<TEntity> GetAll();
     IQueryable<TEntity> FindByCondition(Expression<Func<TEntity, bool>> expression);
     void Create(TEntity entity);
     void Update(TEntity entity);
